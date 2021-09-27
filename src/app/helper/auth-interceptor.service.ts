@@ -27,7 +27,6 @@ export const authInterceptorProviders = [ //TODO ?
   {
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
-    useValue: undefined,
     multi: true
   }
 ]

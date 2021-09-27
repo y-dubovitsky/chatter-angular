@@ -1,1 +1,52 @@
-<p>register works!</p>
+<div class="registration-page">
+  <h2>Registration</h2>
+  <form [formGroup]="registerForm">
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>Email Address</mat-label>
+        <input matInput type="text" formControlName="email">
+      </mat-form-field>
+    </div>
+
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input type="text" matInput formControlName="username">
+      </mat-form-field>
+    </div>
+
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>Firstname</mat-label>
+        <input type="text" matInput formControlName="firstname">
+      </mat-form-field>
+    </div>
+
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>Lastname</mat-label>
+        <input type="text" matInput formControlName="lastname">
+      </mat-form-field>
+    </div>
+
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+      </mat-form-field>
+    </div>
+
+    <div class="justify-content-center">
+      <mat-form-field>
+        <mat-label>ConfirmPassword</mat-label>
+        <input type="password" matInput formControlName="confirmPassword">
+      </mat-form-field>
+    </div>
+
+    <div class="controlls">
+      <button [disabled]="registerForm.invalid" (click)="submit()">Register</button>
+    </div>
+
+    <a routerLink="/login">Login</a>
+  </form>
+</div>
