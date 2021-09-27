@@ -33,6 +33,7 @@ export class ErrorInterceptorService implements HttpInterceptor {
 export const authErrorInterceptorProvider = [
   {
     provide: HTTP_INTERCEPTORS,
+    useValue: undefined,
     userClass: ErrorInterceptorService,
     multi: true
   }
